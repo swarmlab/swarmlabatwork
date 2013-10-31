@@ -1,0 +1,18 @@
+locations:
+  - {name: SL1}
+
+SL1:
+  objects:
+    - {name: R20}
+    - {name: V20}
+    - {name: F20_20_B}
+
+R20:
+  place_location: SL2
+
+V20:
+  place_location: SL2
+
+F20_20_B:
+  place_location: SL2
+
