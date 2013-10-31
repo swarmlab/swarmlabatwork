@@ -1,0 +1,24 @@
+<package>
+  <description brief="slaw_smach">
+
+     slaw_smach
+
+  </description>
+  <author>youbot</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/slaw_smach</url>
+  <depend package="rospy"/>
+  <depend package="smach"/>
+  <depend package="smach_ros"/>
+  <depend package="move_base"/>
+
+  <depend package="slaw_arm_navigation"/>
+  <depend package="slaw_location_service"/>
+  <depend package="slaw_vision"/>
+  <depend package="slaw_registration"/>
+  <depend package="slaw_manipulation"/>
+  
+</package>
+
+

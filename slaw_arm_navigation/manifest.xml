@@ -1,0 +1,33 @@
+<package>
+  <description brief="slaw_arm_navigation">
+
+     slaw_arm_navigation
+
+  </description>
+  <author>Daniel Claes</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/slaw_arm_navigation</url>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+  <depend package="actionlib"/>
+  <depend package="actionlib_msgs"/>  
+  <depend package="trajectory_msgs"/>  
+  <depend package="control_msgs"/>  
+  <depend package="sensor_msgs"/>  
+  <depend package="kinematics_msgs"/>
+
+  <depend package="slaw_vision"/>
+
+  
+  <depend package="geometry_msgs"/>  
+
+  <depend package="dynamic_reconfigure"/>  
+
+  <depend package="arm_navigation_msgs"/>
+  <depend package="brics_actuator"/>
+
+  
+</package>
+
+

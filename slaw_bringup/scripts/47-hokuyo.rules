@@ -1,0 +1,3 @@
+SUBSYSTEMS=="usb", KERNEL=="ttyACM[0-9]*", ATTRS{manufacturer}=="Hokuyo Data Flex for USB", ATTRS{product}=="URG-Series USB Driver", MODE="0666", PROGRAM=="/home/youbot/ros/swarmlabatwork/slaw_bringup/scripts/hokuyo.sh %N q" SYMLINK+="sensors/hokuyo_%c"
+
+

@@ -1,0 +1,15 @@
+<launch>
+  <rosparam command="load" file="$(find slaw_cameramount)/config/mount_config.yaml" ns="slaw_cameramount/" />
+
+
+  <node pkg="rosserial_python" type="serial_node.py" name="camServo" respawn="true">
+    <param name="port" value="/dev/arduino_cam"/>
+    <param name="baud" value="115200"/>
+  </node>
+
+  <node pkg="slaw_cameramount" type="cameramount.py" name="cameramount" output="screen">
+  </node>
+
+
+</launch>
+

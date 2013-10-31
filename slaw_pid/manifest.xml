@@ -1,0 +1,15 @@
+<package>
+  <description brief="slaw_pid">
+
+     slaw_pid
+
+  </description>
+  <author>swarmlab</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/slaw_pid</url>
+  <depend package="rospy"/>
+
+</package>
+
+

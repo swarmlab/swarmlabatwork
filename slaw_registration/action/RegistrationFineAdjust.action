@@ -1,0 +1,15 @@
+#goal
+sensor_msgs/LaserScan front
+sensor_msgs/LaserScan rear
+float32 x_thresh
+float32 y_thresh
+float32 theta_thresh
+int32 duration #in s
+---
+#result
+bool result
+float32 x_result
+float32 y_result
+float32 theta_result
+---
+#feedback

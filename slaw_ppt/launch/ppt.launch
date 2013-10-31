@@ -1,0 +1,9 @@
+<launch>
+  <rosparam command="load" file="$(find slaw_smach)/config/smach.yaml"/>
+  <rosparam command="load" file="$(find slaw_ppt)/config/plan.yaml"/>
+  <rosparam command="load" file="$(find slaw_ppt)/config/ppt.yaml"/>
+
+  <node name="slaw_ppt" pkg="slaw_ppt" type="ppt.py" output="screen"/>
+  
+  <!-- <node name="smach_viewer" pkg="smach_viewer" type="smach_viewer.py" /> -->
+</launch>  

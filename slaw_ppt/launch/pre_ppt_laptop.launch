@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find slaw_bringup)/launch/openni.launch" />
+  <node pkg="slaw_manipulation" name="detect" type="detect_objects.py" respawn="true" output="screen" />
+  <node pkg="slaw_manipulation" name="detect_holes" type="detect_holes.py" respawn="true" output="screen" />
+    
+</launch>

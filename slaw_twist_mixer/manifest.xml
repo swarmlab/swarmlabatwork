@@ -1,0 +1,15 @@
+<package>
+  <description brief="youbot twist_mixer">
+
+     slaw_twist_mixer
+
+  </description>
+  <author>Swarmlab</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/twist_mixer</url>
+  
+  <depend package="roscpp" />
+  <depend package="geometry_msgs" />
+
+</package>

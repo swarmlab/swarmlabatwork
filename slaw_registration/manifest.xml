@@ -1,0 +1,22 @@
+<package>
+  <description brief="slaw_registration">
+
+     slaw_registration
+
+  </description>
+  <author>parallels</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/slaw_registration</url>
+  <depend package="roscpp"/>
+  <depend package="laser_geometry"/>
+  <depend package="pcl"/>
+  <depend package="pcl_ros"/>
+  <depend package="tf"/>
+  <depend package="pcl17"/>
+  <depend package="pcl17_ros"/>
+  <depend package="slaw_navigation" />
+  
+</package>
+
+

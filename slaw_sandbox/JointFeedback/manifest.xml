@@ -1,0 +1,18 @@
+<package>
+  <description brief="JointFeedback">
+
+     JointFeedback
+
+  </description>
+  <author>Rik Claessens</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/JointFeedback</url>
+  <depend package="std_msgs"/>
+  <depend package="rospy"/>
+  <depend package="roscpp"/>
+  <depend package="youbot_driver"/>
+
+</package>
+
+

@@ -1,0 +1,36 @@
+base_link: '/base_link'
+camera_link: '/camera_link'
+start_pos: 'center'
+publish_tf: True
+positions:
+  right:
+    translation:
+      x: -0.0880067
+      y: 0.0183636
+      z: 0.648557
+    rotation:
+      x: 0.196112
+      y: 0.494071
+      z: -0.362239
+      w: 0.765648
+  left:
+    translation:
+      x: -0.202704
+      y: 0.162412
+      z: 0.681809
+    rotation:
+      x: -0.3139
+      y: 0.525365
+      z: 0.332694
+      w: 0.717476
+  center:
+    translation:
+      x: -0.159088
+      y: 0.0815405
+      z: 0.631426
+    rotation:
+      x: -0.00824329
+      y: 0.494199
+      z: -0.00836176
+      w: 0.86927
+  

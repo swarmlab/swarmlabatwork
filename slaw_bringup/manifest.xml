@@ -1,0 +1,14 @@
+<package>
+  <description brief="youbot_launch">
+
+     slaw_bringup
+
+  </description>
+  <author>Joscha Fossel</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/youbot_launch</url>
+
+</package>
+
+

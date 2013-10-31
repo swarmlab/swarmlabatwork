@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find slaw_registration)/launch/icp.launch" />
+  <include file="$(find slaw_navigation)/launch/slaw_global_navigation.launch" />
+  <include file="$(find slaw_arm_navigation)/launch/slaw_arm_navigation.launch" />
+  <node pkg="slaw_navigation" name="odom_move" type="odom_move.py" />
+</launch>

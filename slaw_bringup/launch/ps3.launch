@@ -1,0 +1,7 @@
+<launch>
+    <node name="joy" pkg="joy" type="joy_node" respawn="false" output="screen" />
+
+    <node name="stick" pkg="slaw_joystick" type="stick" respawn="false" output="screen">
+        <remap from="cmd_vel" to="cmd_twist_joy"/>    
+    </node>
+</launch>

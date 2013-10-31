@@ -1,0 +1,54 @@
+D0:
+  align: W
+  side: left
+
+
+##positions
+test:
+  side: left
+  align: N
+  objects:
+    - {name: M20}
+    - {name: R20}
+   # - {name: M20_100}
+
+C1:
+  side: left
+  align: N
+
+D1:
+  side: straight
+  align: S
+
+D2:
+  side: left
+  align: W
+
+S1:
+  side: left
+  align: E
+
+
+S2:
+  side: left
+  align: E
+
+S3:
+  side: left
+  align: E
+    
+S4:
+  side: left
+  align: W
+
+S5:
+  side: left
+  align: E
+
+#general config  
+smach:
+  no_move_base: false
+  no_fine_adjust: false
+  no_arm: false
+  time_out: 15.0
+  max_tries: 4

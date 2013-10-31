@@ -1,0 +1,5 @@
+# list the topics based on priority (lowest first)
+twist_mixer_topics: [cmd_twist_move_base, cmd_twist_joy]
+
+# time for which lower priority topics are ignored if something of higher priority is published
+hold_off_time: 1.0

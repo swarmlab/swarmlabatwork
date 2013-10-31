@@ -1,0 +1,29 @@
+<launch>
+  <node name="slaw_registration_icp" pkg="slaw_registration" type="icp" output="screen" respawn="true">
+    <param name="registration_debug" value="false"/>
+
+    <param name="registration_icp_max_iter" value="50"/>
+    <param name="registration_icp_max_range" value="2"/>
+
+    <param name="registration_ransac_max_iter" value="0"/>
+    <param name="registration_ransac_max_range" value="0.05"/>
+
+    <param name="registration_publish_cloud" value="true"/>
+    <param name="registration_publish_pose" value="true"/>
+    <param name="registration_publish_pose_stamped" value="false"/>
+  </node>
+
+  <node name="slaw_pid_pose" pkg="slaw_navigation" type="pid_pose.py" output="screen" respawn="true">
+  </node>
+
+  <node name="slaw_registration_monitor" pkg="slaw_registration" type="fakeMonitor.py" output="screen" respawn="true">
+  </node>
+
+  <node name="slaw_registration_ff" pkg="slaw_registration" type="forcefield" output="screen" respawn="true">
+  </node>
+  
+  <!-- input: /scan_registration/setTar srv/setRegistrationTar -->
+  <!-- output:: /scan_registration/tarDir geometry_msgs/Pose2d -->	
+ 
+
+</launch>  

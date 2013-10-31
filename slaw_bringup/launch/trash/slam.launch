@@ -1,0 +1,17 @@
+<launch>
+  <!-- start Gazebo with the youBot world -->
+  <include file="$(find rail_worlds)/launch/youbot_world.launch" />
+
+  <!-- spawn the youBot and its controllers -->
+  <include file="$(find rms_youbot_gazebo_environment)/launch/youbot_gazebo_start.launch" />
+
+  <!-- start the common server nodes -->
+  <node name="mjpeg_server" pkg="mjpeg_server" type="mjpeg_server" respawn="false" output="screen" />
+  <node name="rosbridge_server" pkg="rosbridge_server" type="rosbridge.py" respawn="false" output="screen" />
+
+  <!-- start localization -->
+  <include file="$(find youbot_overhead_localization)/launch/path_planner_sim.launch" />
+
+  <!-- start pointcloud to laserscan -->
+    <include file="$(find turtlebot_bringup)/launch/kinect.launch" />
+</launch>

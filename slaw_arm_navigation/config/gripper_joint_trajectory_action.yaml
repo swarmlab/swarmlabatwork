@@ -1,0 +1,22 @@
+gripper_controller:
+  joint_trajectory_action:
+    unit: m
+    joints:
+      - gripper_finger_joint_l
+      - gripper_finger_joint_r
+    constraints:
+      goal_dif: 0.001
+      goal_time: 0.6
+      gripper_finger_joint_l:
+        goal: 0.2
+      gripper_finger_joint_r:
+        goal: 0.2
+
+    max_voltage: 3.0
+    limits:
+      gripper_finger_joint_l:
+        min: 0.0
+        max: 0.0115
+      gripper_finger_joint_r:
+        min: 0
+        max: 0.0115

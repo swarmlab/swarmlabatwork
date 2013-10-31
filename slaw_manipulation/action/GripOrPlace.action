@@ -1,0 +1,11 @@
+#goal definition
+#float32 distance
+#int32 iterations
+string position
+bool grip
+float32 height
+---
+#result definition
+bool result
+---
+#feedback

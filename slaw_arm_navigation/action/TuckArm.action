@@ -1,0 +1,10 @@
+#goal definition
+bool tuck_arm
+bool tuck_gripper
+int32 shuffle
+---
+#result definition
+bool tuck_arm
+bool tuck_gripper
+---
+#feedback

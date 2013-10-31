@@ -1,0 +1,34 @@
+<launch>
+	<!-- start the hokuyo node -->
+	<node type="hokuyo_node" pkg="hokuyo_node" name="base_laser_front" output="screen">  
+		<param name="min_ang" value="-1.85" />
+		<param name="max_ang" value="1.85" />
+		<remap from="/scan" to="/base_scan_front"/>
+		<param name="port" value="/dev/sensors/hokuyo_front"/>
+		<param name="frame_id" value="/base_laser_front_link" />
+	</node>
+
+	<node type="hokuyo_node" pkg="hokuyo_node" name="base_laser_rear" output="screen">  
+		<param name="min_ang" value="-1.8" />
+		<param name="max_ang" value="1.8" />
+		<remap from="/scan" to="/base_scan_rear"/>
+		<param name="port" value="/dev/sensors/hokuyo_rear"/>
+		<param name="frame_id" value="/base_laser_rear_link" />
+	</node>
+
+	<!-- configure the transform for hokuyo -->
+	<!--<node pkg="tf" type="static_transform_publisher" name="front_hokuyo_frame" 
+		  args="0 0 0 0 0 0 /base_laser_front_link /laser 100" />-->
+
+	<!--<node pkg="tf" type="static_transform_publisher" name="rear_hokuyo_frame" 
+	      args="-0.11 0 0.06 3.141592 0 0 /plate_link /base_laser_rear_link 100" />-->
+	<!-- <node pkg="tf" type="static_transform_publisher" name="rear_hokuyo_frame" -->
+	<!--        args="-0.18 0 -0.06 3.141592 0 0 /plate_link /base_laser_rear_link 100" /> -->
+
+	<!-- republish for amcl -->
+	<node pkg="topic_tools" type="relay" name="relay_hokuyo_front" 
+	      args="/base_scan_front /base_scan_combined" />
+	<node pkg="topic_tools" type="relay" name="relay_hokuyo_rear" 
+	      args="/base_scan_rear /base_scan_combined" />
+
+</launch>

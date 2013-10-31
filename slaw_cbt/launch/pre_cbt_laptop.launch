@@ -1,0 +1,4 @@
+<launch>
+  <include file="$(find slaw_vision)/launch/usb_cam.launch" />
+  <node pkg="slaw_manipulation" name="detect" type="cbt_vision.py" respawn="true" output="screen" /> 
+</launch>

@@ -1,0 +1,25 @@
+locations:
+  - {name: S3}
+  - {name: S2}
+
+S3:
+  objects:
+    - {name: R20, configuration: circle}
+
+S2:
+  objects:
+    - {name: M20_100, configuration: line}
+    - {name: F20_20_B, configuration: zigzag}
+
+R20:
+  place_location: D1
+  place_configuration: circle
+
+F20_20_B:
+  place_location: D1
+  place_configuration: line
+
+M20_100:
+  place_location: D2
+  place_configuration: line
+

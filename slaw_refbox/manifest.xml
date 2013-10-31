@@ -1,0 +1,14 @@
+<package>
+  <description brief="slaw_refbox">
+
+     slaw_refbox
+
+  </description>
+  <author>danielclaes</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/slaw_refbox</url>
+
+</package>
+
+

@@ -1,0 +1,10 @@
+<stack>
+  <description brief="youbot-swarmlab">youbot-swarmlab</description>
+  <author>Maintained by swarmlab</author>
+  <license>GPL,BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://swarmlab.dyndns.org/</url>
+  <depend stack="ros" />
+  <depend stack="ros_comm" /> <!-- rospy, roscpp -->
+
+</stack>

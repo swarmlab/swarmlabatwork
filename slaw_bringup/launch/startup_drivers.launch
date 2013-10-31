@@ -1,0 +1,10 @@
+<launch>
+  
+  <include file="$(find youbot_oodl)/launch/youbot_oodl_driver.launch" />
+
+  <node type="youbot_oodl_watchdog.py" pkg="slaw_bringup" name="youbot_oodl_watchdog" output="screen" />
+  <include file="$(find slaw_bringup)/launch/youbot_joint_state_publisher.launch" />
+
+</launch>
+
+

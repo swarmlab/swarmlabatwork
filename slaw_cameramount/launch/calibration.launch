@@ -1,0 +1,22 @@
+<launch>
+  <!-- Start the Kinect -->
+  <include file="$(find openni_launch)/launch/openni.launch" />
+
+  <node pkg="rosserial_python" type="serial_node.py" name="camServo" respawn="true">
+    <param name="port" value="/dev/arduino_cam"/>
+    <param name="baud" value="115200"/>
+  </node>
+
+  <node pkg="slaw_cameramount" type="cameramount.py" name="slaw_cameramount" output="screen">
+    <param name="publish_tf" value="False"/>
+  </node>
+
+  <!-- Setup frame form a well known hook of robot modle to the marker center -->
+  <node pkg="tf" type="static_transform_publisher" name="youbot_pattern_static_trasform"
+	args="-0.008 0 0.03 0 0 0 /gripper_finger_link_l /pattern_center_circle 500" />
+
+  <!-- Start actual registration procedure -->
+  <node pkg="slaw_cameramount" type="calibration" name="slaw_calibration" output="screen"/>
+
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find slaw_cameramount)/calibration.vcg" />
+</launch>

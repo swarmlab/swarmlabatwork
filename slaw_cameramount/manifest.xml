@@ -1,0 +1,20 @@
+<package>
+  <description brief="slaw_cameramount">
+
+     slaw_cameramount
+
+  </description>
+  <author>Daniel Hennes</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/slaw_cameramount</url>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+  <depend package="tf"/>
+  <depend package="brics_actuator"/>
+  <depend package="pcl_ros"/>
+  <depend package="cv_bridge"/>
+
+</package>
+
+

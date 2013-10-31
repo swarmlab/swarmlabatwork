@@ -1,0 +1,4 @@
+sensor_msgs/LaserScan front
+sensor_msgs/LaserScan rear
+---
+bool success

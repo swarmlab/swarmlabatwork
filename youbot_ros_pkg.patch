@@ -1,0 +1,46 @@
+diff --git a/youbot_drivers/youbot_oodl/CMakeLists.txt b/youbot_drivers/youbot_oodl/CMakeLists.txt
+index 5971f49..ba2e33c 100644
+--- a/youbot_drivers/youbot_oodl/CMakeLists.txt
++++ b/youbot_drivers/youbot_oodl/CMakeLists.txt
+@@ -57,7 +57,7 @@ target_link_libraries(youbot_oodl ${OODL_YOUBOT_LIBRARIES} ${Boost_LIBRARIES})
+ 
+ OPTION(USE_SETCAP "Set permissions to access ethernet interface without sudo" ON)
+ 
+-SET(SUDO_COMMAND gksudo)
++SET(SUDO_COMMAND sudo)
+ IF($ENV{USE_NORMAL_SUDO})
+     SET(SUDO_COMMAND sudo)
+ ENDIF($ENV{USE_NORMAL_SUDO})
+diff --git a/youbot_drivers/youbot_oodl/src/YouBotOODLWrapper.cpp b/youbot_drivers/youbot_oodl/src/YouBotOODLWrapper.cpp
+index 8e51d95..557b142 100644
+--- a/youbot_drivers/youbot_oodl/src/YouBotOODLWrapper.cpp
++++ b/youbot_drivers/youbot_oodl/src/YouBotOODLWrapper.cpp
+@@ -701,6 +701,7 @@ void YouBotOODLWrapper::computeOODLSensorReadings()
+     currentTime = ros::Time::now();
+     youbot::JointSensedAngle currentAngle;
+     youbot::JointSensedVelocity currentVelocity;
++    youbot::JointSensedCurrent currentCurrent;
+ 
+     youbot::EthercatMaster::getInstance().AutomaticReceiveOn(false); // ensure that all joint values will be received at the same time
+ 
+@@ -816,6 +817,7 @@ void YouBotOODLWrapper::computeOODLSensorReadings()
+             armJointStateMessages[armIndex].name.resize(youBotArmDoF + youBotNumberOfFingers);
+             armJointStateMessages[armIndex].position.resize(youBotArmDoF + youBotNumberOfFingers);
+             armJointStateMessages[armIndex].velocity.resize(youBotArmDoF + youBotNumberOfFingers);
++	    armJointStateMessages[armIndex].effort.resize(youBotArmDoF);
+ 
+             if (youBotConfiguration.youBotArmConfigurations[armIndex].youBotArm == 0)
+             {
+@@ -828,10 +830,12 @@ void YouBotOODLWrapper::computeOODLSensorReadings()
+             {
+                 youBotConfiguration.youBotArmConfigurations[armIndex].youBotArm->getArmJoint(i + 1).getData(currentAngle); //youBot joints start with 1 not with 0 -> i + 1 //FIXME might segfault if only 1eout of 2 arms are initialized.
+                 youBotConfiguration.youBotArmConfigurations[armIndex].youBotArm->getArmJoint(i + 1).getData(currentVelocity);
++		youBotConfiguration.youBotArmConfigurations[armIndex].youBotArm->getArmJoint(i + 1).getData(currentCurrent);
+ 
+                 armJointStateMessages[armIndex].name[i] = youBotConfiguration.youBotArmConfigurations[armIndex].jointNames[i]; //TODO no unique names for URDF yet
+                 armJointStateMessages[armIndex].position[i] = currentAngle.angle.value();
+                 armJointStateMessages[armIndex].velocity[i] = currentVelocity.angularVelocity.value();
++		armJointStateMessages[armIndex].effort[i] = currentCurrent.current.value();
+             }
+ 
+             // check if trajectory controller is finished

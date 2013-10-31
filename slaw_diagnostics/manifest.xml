@@ -1,0 +1,18 @@
+<package>
+  <description brief="slaw_diagnostics">
+
+     slaw_diagnostics
+
+  </description>
+  <author>Daan Bloembergen</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/slaw_diagnostics</url>
+  
+  <depend package="rospy"/>
+  <depend package="roscpp"/>
+  <depend package="diagnostic_msgs"/>
+
+</package>
+
+

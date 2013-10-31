@@ -1,0 +1,23 @@
+Monitor-Controller architecture
+
+Controller is transforming error input to geometry_msgs/Twist output
+preferably dynamically reconfigurable
+start with picewise linear, later more complex controllers (PID, LQR, LQG, ...)
+
+Monitor checks if termination criterion is reached:
+- at the core is one abstract function, e.g. "check"
+- max number of iterations, time
+- min error
+- max error (useful if divergent)
+- Monitor implements Action Server
+
+Monitor or Controller should take an optional offset (e.g. for fine adjust) or calibration of visual tracking.
+
+
+Monitor and Controller should be Python classes
+A node extends both and loads parameters and overrides monitor check function
+
+Visual Tracking published tracking error
+- start/stop service calls (to save computational load)
+
+Scan Matcher should work the same way

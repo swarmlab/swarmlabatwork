@@ -1,0 +1,15 @@
+<package>
+  <description brief="slaw_cbt">
+
+     slaw_cbt
+
+  </description>
+  <author>youbot</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/slaw_cbt</url>
+  <depend package="rospy"/>
+
+</package>
+
+

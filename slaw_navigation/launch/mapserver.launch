@@ -1,0 +1,6 @@
+<launch>
+  <!-- optional: specify map -->
+  <arg name="map" value="map" />
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find slaw_navigation)/maps/$(arg map).yaml" output="screen" />
+
+</launch>

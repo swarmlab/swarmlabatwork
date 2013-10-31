@@ -1,0 +1,92 @@
+DWAPlannerROS:
+  acc_lim_th: 1.5
+  acc_lim_x: 1.5
+  acc_lim_y: 1.5
+
+  dec_lim_th: 4.5
+  dec_lim_x: 2.5
+  dec_lim_y: 2.5
+
+  max_vel_x: 0.6
+  min_vel_x: -0.6
+
+  max_vel_y: 0.3
+  min_vel_y: -0.3
+
+  max_trans_vel: 0.6
+  min_trans_vel: 0.1
+
+  max_rot_vel: 0.75
+  min_rot_vel: 0.2
+
+  sim_time: 1.7
+  sim_granularity: 0.025
+
+  goal_distance_bias: 32.0
+  path_distance_bias: 24.0
+  heading_bias: 24.0
+
+  squared_dist_for_rotating: 1
+  
+  occdist_scale: 0.01
+
+  stop_time_buffer: 0.2
+  oscillation_reset_dist: 0.05
+
+  forward_point_distance: 0.0 #0.325 Do not enforce moving forwards
+
+  scaling_speed: 0.35
+  max_scaling_factor: 0.1
+
+  vx_samples: 9
+  vy_samples: 9
+  vth_samples: 5
+
+  sim_period: 0.2
+
+  xy_goal_tolerance: 0.075
+  yaw_goal_tolerance: 0.05
+
+  rot_stopped_vel: 0.01
+  trans_stopped_vel: 0.01
+  
+  penalize_negative_x: false
+
+
+NavfnROS:
+  default_tolerance: 0.2
+  visualize_potential: true
+  allow_unknown: false
+
+# Robot Configuration Parameters
+TrajectoryPlannerROS:
+    acc_lim_x: 1.25
+    acc_lim_y: 1.25
+    acc_lim_th: 1.6
+    max_vel_x: 0.5
+    min_vel_x: 0.1
+    max_rotational_vel: 1.0
+    min_in_place_rotational_vel: 0.1
+    escape_vel: -0.1
+    holonomic_robot: true
+
+    # Goal Tolerance Parameters
+    xy_goal_tolerance: 0.1
+    yaw_goal_tolerance: 0.1
+
+    # Forward Simulation Parameters
+    sim_time: 1.7
+    sim_granularity: 0.025
+    vx_samples: 5
+    vtheta_samples: 6
+
+    # Trajectory Scoring Parameters
+    goal_distance_bias: 0.8
+    path_distance_bias: 0.6
+    occdist_scale: 0.01
+    heading_lookahead: 0.325
+    dwa: false
+
+    # Oscillation Prevention Parameters
+    oscillation_reset_dist: 0.01
+

@@ -1,0 +1,15 @@
+<launch>
+  <node pkg="usb_cam" name="usb_cam" type="usb_cam_node">
+        <param name="video_device" value="/dev/video1" />
+	<param name="pixel_format" value="yuyv" />
+	<param name="camera_frame_id" value="camera_gripper" />
+	<param name="image_width" value="160" />
+	<param name="image_height" value="120" />
+  </node>
+<!--
+  <node pkg="slaw_manipulation" type="visual_servoing.py" name="visual_servoing" output='screen' />
+  <node pkg="slaw_navigation" type="fine_adjust.py" name="fine_adjust" output='screen' />
+-->
+  <!-- <include file="$(find slaw_navigation)/launch/slaw_global_navigation.launch" /> -->
+  <include file="$(find slaw_arm_navigation)/launch/slaw_arm_navigation.launch" />
+</launch>

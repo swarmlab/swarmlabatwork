@@ -1,0 +1,5 @@
+<launch>
+  <rosparam command="load" file="$(find slaw_smach)/config/smach.yaml"/>
+  <rosparam command="load" file="$(find slaw_bnt)/config/plan.yaml"/>
+  <node name="bnt_smach" pkg="slaw_bnt" type="bnt_smach.py" output="screen"/>
+</launch>  

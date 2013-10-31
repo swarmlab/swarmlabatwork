@@ -1,0 +1,12 @@
+<launch>
+  <include file="$(find slaw_cameramount)/launch/cameramount.launch"/>
+  
+  <include file="$(find openni_launch)/launch/openni.launch">
+    <arg name="depth_registration" value="true"/>
+  </include>
+  <node name="slaw_vision" pkg="slaw_vision" type="server" output="screen" respawn="true">
+    <param name="server" value="false" />
+    <param name="threshold_size" value="3" />
+    <param name="threshold_dist" value="0.01" />
+  </node>
+</launch>  

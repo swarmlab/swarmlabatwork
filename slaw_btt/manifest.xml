@@ -1,0 +1,22 @@
+<package>
+  <description brief="slaw_btt">
+
+     slaw_btt
+
+  </description>
+  <author>youbot</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/slaw_bmt</url>
+  <depend package="rospy"/>
+  <depend package="smach"/>
+  <depend package="smach_ros"/>
+  <depend package="move_base"/>
+  <depend package="visualization_msgs" />
+  <depend package="slaw_bnt" />
+  <depend package="slaw_navigation" />
+  <depend package="slaw_manipulation" />
+
+</package>
+
+

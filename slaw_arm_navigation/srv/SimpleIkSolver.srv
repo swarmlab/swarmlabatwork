@@ -1,0 +1,4 @@
+geometry_msgs/PointStamped point
+string position
+---
+float64[] joints

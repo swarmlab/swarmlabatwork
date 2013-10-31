@@ -1,0 +1,18 @@
+<package>
+  <description brief="slaw_location_service">
+
+     slaw_location_service
+
+  </description>
+  <author>Daan Bloembergen</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/slaw_location_service</url>
+  
+  <depend package="rospy" />
+  <depend package="std_srvs" />
+  <depend package="sensor_msgs" />
+  <depend package="geometry_msgs" />
+  <depend package="tf" />
+
+</package>

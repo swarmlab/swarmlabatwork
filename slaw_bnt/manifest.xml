@@ -1,0 +1,19 @@
+<package>
+  <description brief="bnt">
+
+     bnt
+
+  </description>
+  <author>Daniel Hennes</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/bnt</url>
+  <depend package="rospy"/>
+  <depend package="smach"/>
+  <depend package="smach_ros"/>
+  <depend package="move_base"/>
+  <depend package="visualization_msgs" />
+  
+</package>
+
+

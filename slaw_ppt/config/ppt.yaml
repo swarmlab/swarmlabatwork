@@ -1,0 +1,27 @@
+R20:
+  hole: RV20
+
+V20:
+  hole: RV20
+
+F20_20_B:
+  hole: F20_20
+
+F20_20_G:
+  hole: F20_20
+
+M20:
+  hole: M20
+
+M20_100:
+  hole: M20_100
+
+M30:
+  hole: M30
+
+S40_40_B:
+  hole: S40_40
+
+S40_40_G:
+  hole: S40_40
+

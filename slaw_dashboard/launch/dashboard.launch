@@ -1,0 +1,5 @@
+<launch>
+   
+	<node pkg="slaw_dashboard" type="slaw_dashboard.py" name="slaw_dashboard" output="screen"/>
+    
+</launch>

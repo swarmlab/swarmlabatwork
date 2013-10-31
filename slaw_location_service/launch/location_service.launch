@@ -1,0 +1,5 @@
+<launch>
+	<node name="location_service" pkg="slaw_location_service" type="location_service.py" output="screen" >
+		<param name="filename" value="locations.p" />
+	</node>
+</launch>

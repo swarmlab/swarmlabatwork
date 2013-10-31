@@ -1,0 +1,8 @@
+locations:
+#  - {name: D1, dir: N, sleep: 3}
+#  - {name: S1, dir: S, sleep: 3}
+  - {name: D2, dir: W, sleep: 3}
+#  - {name: T2, dir: S, sleep: 3}
+#  - {name: C1, dir: W, sleep: 3}
+#  - {name: S3, dir: E, sleep: 3}
+#  - {name: D0, dir: W, sleep: 3}

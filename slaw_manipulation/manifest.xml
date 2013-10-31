@@ -1,0 +1,39 @@
+<package>
+  <description brief="slaw_manipulation">
+
+     slaw_manipulation
+
+  </description>
+  <author>Joscha Fossel</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/slaw_manipulation</url>
+  <depend package="roscpp"/>
+  <depend package="tf" />
+  <depend package="slaw_vision" />
+  <depend package="slaw_arm_navigation" />
+
+
+  <depend package="rospy"/>
+
+
+  <depend package="actionlib"/>
+  <depend package="actionlib_msgs"/>  
+  <depend package="trajectory_msgs"/>  
+  <depend package="control_msgs"/>  
+  <depend package="sensor_msgs"/>  
+  <depend package="kinematics_msgs"/>
+
+  <depend package="slaw_vision"/>
+
+  
+  <depend package="geometry_msgs"/>  
+  <depend package="std_srvs"/>  
+
+  <depend package="arm_navigation_msgs"/>
+  <depend package="brics_actuator"/>
+
+  
+</package>
+
+

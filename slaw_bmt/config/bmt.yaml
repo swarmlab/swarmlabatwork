@@ -1,0 +1,108 @@
+positions:
+  S1: #down right
+    dir: W
+    grip_dir: left
+  S2: #Down left
+    dir: W
+    grip_dir: left
+  S5: #up right
+    dir: E
+    grip_dir: left
+  S6:  #up center
+    dir: E
+    grip_dir: left
+  S7: #Up Left
+    dir: E
+    grip_dir: left
+  D3: #Conveyerbelt
+    dir: S
+    grip_dir: left
+  S4: #Center Up
+    dir: W
+    grip_dir: left
+
+
+  S3: #Center Down
+    dir: E
+    grip_dir: left
+ 
+  D0:
+    dir: S
+    grip_dir: left
+
+  D1: #between centerDown  and Belt
+    dir: S
+    grip_dir: left
+
+  D2: #between down right and Bild
+    dir: S
+    grip_dir: left
+#precision placement task
+  D4: 
+    dir: W
+    grip_dir: left
+  S1:  #Down Right
+    x: 1.36
+    y: -1.06
+  S2: #Down Left
+    dir: W
+    grip_dir: left
+    x: 1.69
+    y: 2.182
+  S5: #Up right
+    dir: E
+    x: 4.85
+    y: -0.94
+  S6: #Upcenter
+    dir: E
+    x: 4.85
+    y: -0.39
+  S7: #Up Left
+    dir: E
+    x: 4.85
+    y: 0.46
+  D3: #Conveyerbelt
+    x: 3.08
+    y: -0.353
+  S4: #Center Up
+    x: 3.76
+    y: 0.87
+      
+  S3: #Center Down
+    x: 1.61
+    y: 0.93
+ 
+  D0:
+    dir: S
+    x: 0
+    y: 0
+
+  D1: #between centerDown  and Belt
+    x: 1.52
+    y: 0.10
+
+  D2: #between down right and Bild
+    x: 2.07
+    y: -0.75
+
+  #precision placement task
+  D4: 
+    x: 4.23
+    y: 2.06
+
+
+objects:
+  test:
+    class: 1
+  test1:
+    class: 2
+  test2:
+    class: 3
+ 
+plan:
+  start: S6
+  source: S6
+  dest: S5
+  end: D0
+  ojects: [test, test1, test2]
+  configuration: Line

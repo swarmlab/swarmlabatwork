@@ -1,0 +1,20 @@
+#goal
+#float32 x
+#float32 y
+#float32 theta
+geometry_msgs/Pose2D target
+#float32 x_thresh
+#float32 y_thresh
+#float32 theta_thresh
+geometry_msgs/Pose2D threshold
+float32 max_dist
+int32 duration #in s
+---
+#result
+bool success
+#float32 x_result
+#float32 y_result
+#float32 theta_result
+geometry_msgs/Pose2D result
+---
+#feedback

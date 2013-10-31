@@ -1,0 +1,15 @@
+#goal definition
+float32 distance
+float32 threshold
+int32 iterations
+string position
+float32 offset
+bool use_offset
+bool use_initial
+bool front
+string location
+---
+#result definition
+bool result
+---
+#feedback

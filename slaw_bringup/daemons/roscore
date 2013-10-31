@@ -1,0 +1,36 @@
+#!/bin/bash
+DAEMON_PATH=/home/youbot/ros/swarmlabatwork/slaw_bringup/daemons
+DAEMON=$DAEMON_PATH/bringup_core.sh
+DAEMON_OPTS=""
+NAME=roscore
+DESC="roscore"
+RUN_AS=youbot
+PID_FILE=/home/youbot/.ros/roscore-11311.pid
+ ############### END EDIT ME ##################
+test -x $DAEMON || exit 0
+set -e
+case "$1" in
+    start)
+        echo -n "Starting $DESC: "
+        start-stop-daemon -d $DAEMON_PATH -c $RUN_AS --start --background --pidfile $PID_FILE --exec $DAEMON -- $DAEMON_OPTS
+        echo "$NAME."
+        ;;
+    stop)
+        echo -n "Stopping $DESC: "
+        start-stop-daemon --stop --pidfile $PID_FILE
+        echo "$NAME."
+        ;;
+    restart|force-reload)
+        echo -n "Restarting $DESC: "
+        start-stop-daemon --stop --pidfile $PID_FILE
+        sleep 2
+        start-stop-daemon -d $DAEMON_PATH -c $RUN_AS --start --background --pidfile $PID_FILE  --exec $DAEMON -- $DAEMON_OPTS
+        echo "$NAME."
+        ;;
+    *)
+        N=/etc/init.d/$NAME
+        echo "Usage: $N {start|stop|restart|force-reload}" >&2
+        exit 1
+        ;;
+esac
+exit 0

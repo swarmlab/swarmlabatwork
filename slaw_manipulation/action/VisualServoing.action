@@ -1,0 +1,11 @@
+#goal definition
+#float32 distance
+#int32 iterations
+string position
+bool only_scanning
+---
+#result definition
+bool result
+string object
+---
+#feedback

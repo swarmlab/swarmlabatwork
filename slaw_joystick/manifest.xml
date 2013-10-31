@@ -1,0 +1,19 @@
+<package>
+  <description brief="youbot_joystick">
+
+     slaw_joystick
+
+  </description>
+  <author>Joscha Fossel</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/youbot_joystick</url>
+  <depend package="geometry_msgs"/>
+  <depend package="sensor_msgs"/>
+  <depend package="roscpp"/>
+  <depend package="brics_actuator"/>
+  <depend package="tf"/>
+
+</package>
+
+

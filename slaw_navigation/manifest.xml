@@ -1,0 +1,23 @@
+<package>
+  <description brief="slaw_navigation">
+
+     slaw_navigation
+
+  </description>
+  <author>Daan Bloembergen</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/slaw_navigation</url>
+  <depend package="rospy"/>
+  <depend package="sensor_msgs"/>
+  <depend package="geometry_msgs"/>
+  <depend package="dynamic_reconfigure"/>
+  <depend package="actionlib"/>
+  <depend package="actionlib_msgs"/>
+  <depend package="tf"/>  
+
+  <depend package="slaw_pid" /> 
+  
+</package>
+
+

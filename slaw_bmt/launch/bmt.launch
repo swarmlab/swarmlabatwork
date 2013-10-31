@@ -1,0 +1,8 @@
+<launch>
+  <rosparam command="load" file="$(find slaw_smach)/config/smach.yaml"/>
+  <rosparam command="load" file="$(find slaw_bmt)/config/plan.yaml"/>
+
+  <node name="slaw_bmt" pkg="slaw_bmt" type="bmt.py" output="screen"/>
+  
+  <!-- <node name="smach_viewer" pkg="smach_viewer" type="smach_viewer.py" /> -->
+</launch>  

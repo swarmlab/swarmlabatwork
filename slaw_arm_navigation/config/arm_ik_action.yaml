@@ -1,0 +1,49 @@
+joint_names:
+  - arm_joint_1
+  - arm_joint_2
+  - arm_joint_3
+  - arm_joint_4
+  - arm_joint_5
+
+arm_base_link_height: 0.177 
+
+arm_base_link: '/arm_base_link'
+
+arm_rot_offset: -0.7853981633974483 #rotated 45 degreer left
+
+joints:
+  arm_joint_1:
+    front_offset: 0.033
+    #height: 0.147
+    #height: 0.027
+
+    #front_offset: 0.057
+    height: 0.115
+    straight: 2.9675046
+    min: 0.0100692
+    max: 5.84014
+  arm_joint_2:
+    length: 0.155
+    #straight: 1.04883
+    straight: 1.134883
+
+    min: 0.0100693
+    max: 2.61799
+  arm_joint_3:
+    length: 0.135
+    #straight: -2.43523
+    straight: -2.54823
+    min: -5.02655
+    max: -0.015708
+  arm_joint_4:
+    length: 0.2175
+    #straight: 1.73184
+    straight: 1.7885084
+
+    min: 0.0221239
+    max: 3.4292
+  arm_joint_5:
+    length: 0.0
+    straight: 2.923
+    min: 0.110619
+    max: 5.64159

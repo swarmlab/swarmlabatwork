@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- <include file="$(find youbot_arm_navigation)/ros/launch/planning_environment.launch" /> -->
+	
+  <!-- <include file="$(find youbot_arm_navigation)/ros/launch/environment_server.launch"> -->
+  <!--   <arg name="use_monitor" value="true" /> -->
+  <!--   <arg name="use_collision_map" value="false" /> -->
+  <!-- </include> -->
+
+  <!-- <include file="$(find youbot_arm_navigation)/ros/launch/interpolated_ik_motion_planning.launch" /> -->
+  <!-- <include file="$(find youbot_arm_navigation)/ros/launch/constraint_aware_kinematics.launch" /> -->
+  <!-- <include file="$(find youbot_arm_navigation)/ros/launch/move_arm.launch" /> -->
+
+  
+  <include file="$(find slaw_arm_navigation)/launch/joint_trajectory_action.launch" /> -->
+  <!-- <node pkg='slaw_arm_navigation' type='youbot_ik_action_server.py' name='ik_action_arm' /> -->
+
+
+  
+  <node pkg='slaw_arm_navigation' type='youbot_gripper_action.py' name='gripper_action' />
+  <node pkg='slaw_arm_navigation' type='youbot_tuck_arm_action.py' name='tuck_arm' />
+
+
+  <rosparam file="$(find slaw_arm_navigation)/config/arm_ik_action.yaml" command="load" />
+  <node pkg='slaw_arm_navigation' type='youbot_simple_ik_action.py' name='ik_service' output='screen' />
+
+  
+
+</launch>

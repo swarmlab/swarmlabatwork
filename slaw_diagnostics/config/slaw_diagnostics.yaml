@@ -1,0 +1,39 @@
+pub_rate: 1.0
+base_path: ''
+analyzers:
+    sensors:
+        type: diagnostic_aggregator/AnalyzerGroup
+        path: Sensors
+        analyzers:
+            hokuyo_front:
+                type: diagnostic_aggregator/GenericAnalyzer
+                path: Hokuyo Front
+                timeout: 5.0
+                find_and_remove_prefix: base_laser_front
+                num_items: 2
+            hokuyo_rear:
+                type: diagnostic_aggregator/GenericAnalyzer
+                path: Hokuyo Rear
+                timeout: 5.0
+                find_and_remove_prefix: base_laser_rear
+                num_items: 2
+    power:
+        type: diagnostic_aggregator/GenericAnalyzer
+        path: Battery
+        find_and_remove_prefix: battery
+        num_items: 2
+    platform:
+        type: diagnostic_aggregator/GenericAnalyzer
+        path: Platform
+        find_and_remove_prefix: platform_
+        num_items: 2
+    computer:
+        type: diagnostic_aggregator/GenericAnalyzer
+        path: Computer
+        find_and_remove_prefix: computer
+        num_items: 2
+    joystick:
+        type: diagnostic_aggregator/GenericAnalyzer
+        path: Joystick
+        find_and_remove_prefix: joy
+        num_items: 1

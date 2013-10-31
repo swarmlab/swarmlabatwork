@@ -1,0 +1,32 @@
+<launch>
+  <param name="/use_sim_time" value="true"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find slaw_stage_world)/world/swarmlab_map.yaml" respawn="false" />
+  <node pkg="stage" type="stageros" name="stageros" args="$(find slaw_stage_world)/world/swarmlab_single_turtle.world" respawn="false" >
+    <param name="base_watchdog_timeout" value="0.2"/>
+  </node>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find slaw_stage_world)/single_view.vcg" />
+  <node pkg="fake_localization" type="fake_localization" name="fake_localization" />
+
+  
+  <node pkg="move_base" type="move_base" name="move_base_node" output="screen">
+    <!-- Use the dwa local planner for the PR2 -->
+    <param name="base_local_planner" value="cust_dwa_local_planner/DWAPlannerROS" />
+    <!-- <param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS" /> -->
+    
+    <!-- Load common configuration files -->
+    <rosparam file="$(find slaw_stage_world)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find slaw_stage_world)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+ 
+    <rosparam file="$(find slaw_navigation)/config_common/move_base_params.yaml" command="load" />
+    <rosparam file="$(find slaw_navigation)/config_common/base_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find slaw_navigation)/config_common/recovery_behaviors.yaml" command="load" />
+
+    <!-- Load global navigation specific parameters -->
+    <rosparam file="$(find slaw_navigation)/config_global/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find slaw_navigation)/config_global/global_costmap_params.yaml" command="load" />
+    <!-- <rosparam file="$(find slaw_stage_world)/config/youbot_config.yaml" command="load" />  -->
+  </node>
+
+</launch>
+

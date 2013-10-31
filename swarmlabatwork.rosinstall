@@ -1,0 +1,30 @@
+- hg:
+    uri: http://swarmlab.dyndns.org/youbot/swarmlabatwork
+    local-name: swarmlabatwork
+
+- git:
+    uri: https://github.com/youbot/youbot-ros-pkg.git
+    local-name: youbot_ros_pkg
+
+- git:
+    uri: https://github.com/youbot/youbot_driver.git
+    local-name: youbot_driver
+
+- git:
+    uri: https://github.com/youbot/youbot_applications.git
+    local-name: youbot_applications
+
+- git:
+    uri: git://github.com/ipa320/cob_common.git
+    local-name: cob_common
+
+- git:
+    uri: https://github.com/svenschneider/youbot-manipulation.git
+    local-name: youbot_manipulation
+    version: fuerte
+
+#- svn:
+#    uri: https://svn.best-of-robotics.org/brics/BROCRE/BRICS_3D/trunk
+#    local-name: brics_3d
+
+- svn: {local-name: bosch_drivers/usb_cam, uri: 'http://svn.code.sf.net/p/bosch-ros-pkg/code/trunk/stacks/bosch_drivers/usb_cam'}
